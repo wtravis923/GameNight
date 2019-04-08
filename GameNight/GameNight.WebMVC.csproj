@@ -174,13 +174,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GameNightController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -241,6 +241,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\GameNight\Index.cshtml" />
+    <Content Include="Views\GameNight\Create.cshtml" />
+    <Content Include="Views\GameNight\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +260,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameNight.Data\GameNight.Data.csproj">
+      <Project>{12952b52-cf31-4887-878c-164105bb5737}</Project>
+      <Name>GameNight.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameNight.Models\GameNight.Models.csproj">
+      <Project>{a1b82493-3fd7-4ddd-a26e-5348f7e4bc10}</Project>
+      <Name>GameNight.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameNight.Services\GameNight.Services.csproj">
+      <Project>{fb60f90b-1f71-4779-8e13-7b9c159a04ce}</Project>
+      <Name>GameNight.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

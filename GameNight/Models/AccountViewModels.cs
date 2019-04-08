@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace GameNight.Models
+namespace GameNight.WebMVC.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

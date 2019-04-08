@@ -8,7 +8,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using GameNight.Models;
+using GameNight.Data;
+using GameNight.WebMVC.Models;
 
 namespace GameNight.Controllers
 {
