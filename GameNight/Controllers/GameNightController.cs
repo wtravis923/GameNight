@@ -62,5 +62,21 @@ namespace GameNight.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateGameNightService();
+            var detail = service.GetGameNightById(id);
+            var model =
+                new GameNightEdit
+                {
+                    GameTimeId = detail.GameTimeId,
+                    Game = detail.Game,
+                    DateTime = detail.DateTime,
+                    Location = detail.Location,
+
+                };
+            return View(model);
+        }
+
     }
 }

@@ -92,5 +92,27 @@ namespace GameNight.Services
                     };
             }
         }
+
+        public bool UpdateGameNight(GameNightEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .GameTimes
+                    .Single(e => e.GameTimeId == model.GameTimeId && e.OwnerId == _userId);
+
+                entity.Game = model.Game;
+                entity.DateTime = model.DateTime;
+                entity.Location = model.Location;
+                entity.NumberOfPlayers = model.NumberOfPlayers;
+                entity.Openings = model.Openings;
+                entity.NoobsAllowed = model.NoobsAllowed;
+                entity.Description = model.Description;
+                entity.TutorialVideo = model.TutorialVideo;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

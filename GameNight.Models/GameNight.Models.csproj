@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="GameNightCreate.cs" />
     <Compile Include="GameNightDetail.cs" />
+    <Compile Include="GameNightEdit.cs" />
     <Compile Include="GameNightListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
