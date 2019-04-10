@@ -73,9 +73,59 @@ namespace GameNight.Controllers
                     Game = detail.Game,
                     DateTime = detail.DateTime,
                     Location = detail.Location,
-
+                    NumberOfPlayers = detail.NumberOfPlayers,
+                    Openings = detail.Openings,
+                    NoobsAllowed = detail.NoobsAllowed,
+                    Description = detail.Description,
+                    TutorialVideo = detail.TutorialVideo
                 };
+
             return View(model);
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateGameNightService();
+            var model = svc.GetGameNightById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteGameTime(int id)
+        {
+            var service = CreateGameNightService();
+            service.DeleteGameTime(id);
+            TempData["SaveResult"] = "GameTime successfully deleted.";
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, GameNightEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.GameTimeId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateGameNightService();
+
+            if (service.UpdateGameNight(model))
+            {
+                TempData["SaveResult"] = "Your GameTime was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your GameTime could not be updated. Try again.");
+
+            return View();
         }
 
     }

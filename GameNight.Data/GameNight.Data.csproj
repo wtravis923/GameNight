@@ -60,6 +60,14 @@
     <Compile Include="Migrations\201904081343514_initialdbbuildafterdeletingdb.Designer.cs">
       <DependentUpon>201904081343514_initialdbbuildafterdeletingdb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904091814364_AddedUserName.cs" />
+    <Compile Include="Migrations\201904091814364_AddedUserName.Designer.cs">
+      <DependentUpon>201904091814364_AddedUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904101309078_RemovedNameBio.cs" />
+    <Compile Include="Migrations\201904101309078_RemovedNameBio.Designer.cs">
+      <DependentUpon>201904101309078_RemovedNameBio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +78,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904081343514_initialdbbuildafterdeletingdb.resx">
       <DependentUpon>201904081343514_initialdbbuildafterdeletingdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904091814364_AddedUserName.resx">
+      <DependentUpon>201904091814364_AddedUserName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904101309078_RemovedNameBio.resx">
+      <DependentUpon>201904101309078_RemovedNameBio.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

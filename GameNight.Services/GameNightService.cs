@@ -114,5 +114,20 @@ namespace GameNight.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteGameTime (int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .GameTimes
+                    .Single(e => e.GameTimeId == id && e.OwnerId == _userId);
+
+                ctx.GameTimes.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

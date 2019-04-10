@@ -177,7 +177,6 @@
     <Compile Include="Controllers\GameNightController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -245,11 +244,9 @@
     <Content Include="Views\GameNight\Index.cshtml" />
     <Content Include="Views\GameNight\Create.cshtml" />
     <Content Include="Views\GameNight\Details.cshtml" />
-    <Content Include="Views\Test\Create.cshtml" />
-    <Content Include="Views\Test\Delete.cshtml" />
-    <Content Include="Views\Test\Details.cshtml" />
-    <Content Include="Views\Test\Edit.cshtml" />
-    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\GameNight\Edit.cshtml" />
+    <Content Include="Views\GameNight\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
