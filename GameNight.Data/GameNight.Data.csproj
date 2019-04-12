@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game.cs" />
+    <Compile Include="Gamer.cs" />
     <Compile Include="GameTime.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\201904081343514_initialdbbuildafterdeletingdb.cs" />
@@ -80,6 +82,14 @@
     <Compile Include="Migrations\201904111410029_UserProfile.Designer.cs">
       <DependentUpon>201904111410029_UserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904121326477_2nd3rdTables.cs" />
+    <Compile Include="Migrations\201904121326477_2nd3rdTables.Designer.cs">
+      <DependentUpon>201904121326477_2nd3rdTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904121459014_2nd3rdControllers.cs" />
+    <Compile Include="Migrations\201904121459014_2nd3rdControllers.Designer.cs">
+      <DependentUpon>201904121459014_2nd3rdControllers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -105,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904111410029_UserProfile.resx">
       <DependentUpon>201904111410029_UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904121326477_2nd3rdTables.resx">
+      <DependentUpon>201904121326477_2nd3rdTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904121459014_2nd3rdControllers.resx">
+      <DependentUpon>201904121459014_2nd3rdControllers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

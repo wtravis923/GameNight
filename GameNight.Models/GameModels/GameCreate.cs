@@ -1,20 +1,15 @@
-﻿using System;
+﻿using GameNight.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameNight.Data
+namespace GameNight.Models
 {
-    public enum GameGenre { Strategy, Card, Dice, RolePlaying };
-
-    public class Game
+    public class GameCreate
     {
-        [Key]
-        public int GameId { get; set; }
-        [Required]
-        public Guid OwnerId { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
@@ -22,5 +17,6 @@ namespace GameNight.Data
         [Required]
         public int PlayerCount { get; set; }
 
+        public override string ToString() => Title;
     }
 }

@@ -54,16 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameModels\GameCreate.cs" />
+    <Compile Include="GameModels\GameListItem.cs" />
     <Compile Include="GameNightModels\GameNightCreate.cs" />
     <Compile Include="GameNightModels\GameNightDetail.cs" />
     <Compile Include="GameNightModels\GameNightEdit.cs" />
     <Compile Include="GameNightModels\GameNightListItem.cs" />
+    <Compile Include="GamerModels\GamerCreate.cs" />
+    <Compile Include="GamerModels\GamerListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GameNight.Data\GameNight.Data.csproj">
+      <Project>{12952B52-CF31-4887-878C-164105BB5737}</Project>
+      <Name>GameNight.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
