@@ -152,7 +152,7 @@ namespace GameNight.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { Username = model.Username, Email = model.Email };
+                var user = new ApplicationUser { GamerTag = model.GamerTag, Email = model.Email, UserName = model.GamerTag };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

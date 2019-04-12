@@ -11,7 +11,9 @@ namespace GameNight.Data
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        public string Username { get; set; }
+
+
+        public string GamerTag { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -21,7 +23,7 @@ namespace GameNight.Data
             return userIdentity;
         }
     }
-
+   
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -34,8 +36,10 @@ namespace GameNight.Data
             return new ApplicationDbContext();
         }
 
-        //Adding Property.
+        //Adding Properties.
         public DbSet<GameTime> GameTimes { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Gamer> Gamers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -67,6 +71,5 @@ namespace GameNight.Data
         {
             HasKey(iur => iur.RoleId);
         }
-
     }
 }

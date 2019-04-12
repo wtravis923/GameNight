@@ -68,6 +68,18 @@
     <Compile Include="Migrations\201904101309078_RemovedNameBio.Designer.cs">
       <DependentUpon>201904101309078_RemovedNameBio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904101422431_GamerTag.cs" />
+    <Compile Include="Migrations\201904101422431_GamerTag.Designer.cs">
+      <DependentUpon>201904101422431_GamerTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904101806599_AdminRole.cs" />
+    <Compile Include="Migrations\201904101806599_AdminRole.Designer.cs">
+      <DependentUpon>201904101806599_AdminRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904111410029_UserProfile.cs" />
+    <Compile Include="Migrations\201904111410029_UserProfile.Designer.cs">
+      <DependentUpon>201904111410029_UserProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +96,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904101309078_RemovedNameBio.resx">
       <DependentUpon>201904101309078_RemovedNameBio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904101422431_GamerTag.resx">
+      <DependentUpon>201904101422431_GamerTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904101806599_AdminRole.resx">
+      <DependentUpon>201904101806599_AdminRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904111410029_UserProfile.resx">
+      <DependentUpon>201904111410029_UserProfile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

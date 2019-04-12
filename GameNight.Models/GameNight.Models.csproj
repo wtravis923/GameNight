@@ -54,15 +54,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameNightCreate.cs" />
-    <Compile Include="GameNightDetail.cs" />
-    <Compile Include="GameNightEdit.cs" />
-    <Compile Include="GameNightListItem.cs" />
+    <Compile Include="GameNightModels\GameNightCreate.cs" />
+    <Compile Include="GameNightModels\GameNightDetail.cs" />
+    <Compile Include="GameNightModels\GameNightEdit.cs" />
+    <Compile Include="GameNightModels\GameNightListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
