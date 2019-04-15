@@ -1,5 +1,6 @@
 ﻿using GameNight.Data;
 using GameNight.Models;
+using GameNight.Models.GameModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,6 +54,58 @@ namespace GameNight.Services
                         }
                         );
                 return query.ToArray();
+            }
+        }
+
+        public GameDetail GetGameById(int gameId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Games
+                    .Single(e => e.GameId == gameId);
+
+                return
+                    new GameDetail
+                    {
+                        GameId = entity.GameId,
+                        Title = entity.Title,
+                        Genre = entity.Genre,
+                        PlayerCount = entity.PlayerCount
+                    };
+            }
+        }
+
+        public bool UpdateGame(GameEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Games
+                    .Single(e => e.GameId == model.GameId && e.OwnerId == _gameId);
+
+                entity.Title = model.Title;
+                entity.Genre = model.Genre;
+                entity.PlayerCount = model.PlayerCount;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteGame(int gameId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Games
+                    .Single(e => e.GameId == gameId);
+
+                ctx.Games.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

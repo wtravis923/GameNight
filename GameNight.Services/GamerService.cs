@@ -1,5 +1,6 @@
 ﻿using GameNight.Data;
 using GameNight.Models;
+using GameNight.Models.GamerModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,6 +58,59 @@ namespace GameNight.Services
             }
         }
 
+        public GamerDetail GetGamerById (int gamerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Gamers
+                    .Single(e => e.GamerId == gamerId);
+
+                return
+                    new GamerDetail
+                    {
+                        GamerId = entity.GamerId,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        EmailAddress = entity.EmailAddress,
+                        Location = entity.Location,
+                    };
+            }
+        }
+
+        public bool UpdateGamer(GamerEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Gamers
+                    .Single(e => e.GamerId == model.GamerId);
+
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.EmailAddress = model.EmailAddress;
+                entity.Location = model.Location;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteGamer(int gamerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Gamers
+                    .Single(e => e.GamerId == gamerId);
+
+                ctx.Gamers.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 
 }

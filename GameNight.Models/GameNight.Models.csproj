@@ -54,13 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameModels\GameDetail.cs" />
     <Compile Include="GameModels\GameCreate.cs" />
+    <Compile Include="GameModels\GameEdit.cs" />
     <Compile Include="GameModels\GameListItem.cs" />
     <Compile Include="GameNightModels\GameNightCreate.cs" />
     <Compile Include="GameNightModels\GameNightDetail.cs" />
     <Compile Include="GameNightModels\GameNightEdit.cs" />
     <Compile Include="GameNightModels\GameNightListItem.cs" />
     <Compile Include="GamerModels\GamerCreate.cs" />
+    <Compile Include="GamerModels\GamerDetail.cs" />
+    <Compile Include="GamerModels\GamerEdit.cs" />
     <Compile Include="GamerModels\GamerListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
