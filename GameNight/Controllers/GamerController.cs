@@ -31,7 +31,7 @@ namespace GameNight.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(GamerCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = CreateGamerService();
 

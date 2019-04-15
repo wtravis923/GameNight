@@ -23,11 +23,8 @@ namespace GameNight.Services
                 new GameTime()
                 {
                     OwnerId = _userId,
-                    Game = model.Game,
                     DateTime = model.DateTime,
                     Location = model.Location,
-                    NumberOfPlayers = model.NumberOfPlayers,
-                    Openings = model.Openings,
                     NoobsAllowed = model.NoobsAllowed,
                     Description = model.Description,
                     TutorialVideo = model.TutorialVideo,
@@ -54,11 +51,8 @@ namespace GameNight.Services
                         new GameNightListItem
                         {
                             GameTimeId = e.GameTimeId,
-                            Game = e.Game,
                             DateTime = e.DateTime,
                             Location = e.Location,
-                            NumberOfPlayers = e.NumberOfPlayers,
-                            Openings = e.Openings,
                             NoobsAllowed = e.NoobsAllowed,
                             Description = e.Description,
                             TutorialVideo = e.TutorialVideo,
@@ -81,11 +75,8 @@ namespace GameNight.Services
                     new GameNightDetail
                     {
                         GameTimeId = entity.GameTimeId,
-                        Game = entity.Game,
                         DateTime = entity.DateTime,
                         Location = entity.Location,
-                        NumberOfPlayers = entity.NumberOfPlayers,
-                        Openings = entity.Openings,
                         NoobsAllowed = entity.NoobsAllowed,
                         Description = entity.Description,
                         TutorialVideo = entity.TutorialVideo,
@@ -102,11 +93,8 @@ namespace GameNight.Services
                     .GameTimes
                     .Single(e => e.GameTimeId == model.GameTimeId && e.OwnerId == _userId);
 
-                entity.Game = model.Game;
                 entity.DateTime = model.DateTime;
                 entity.Location = model.Location;
-                entity.NumberOfPlayers = model.NumberOfPlayers;
-                entity.Openings = model.Openings;
                 entity.NoobsAllowed = model.NoobsAllowed;
                 entity.Description = model.Description;
                 entity.TutorialVideo = model.TutorialVideo;

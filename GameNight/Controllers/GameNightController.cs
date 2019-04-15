@@ -70,11 +70,8 @@ namespace GameNight.Controllers
                 new GameNightEdit
                 {
                     GameTimeId = detail.GameTimeId,
-                    Game = detail.Game,
                     DateTime = detail.DateTime,
                     Location = detail.Location,
-                    NumberOfPlayers = detail.NumberOfPlayers,
-                    Openings = detail.Openings,
                     NoobsAllowed = detail.NoobsAllowed,
                     Description = detail.Description,
                     TutorialVideo = detail.TutorialVideo

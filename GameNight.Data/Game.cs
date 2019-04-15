@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameNight.Data
 {
-    public enum GameGenre { Strategy, Card, Dice, RolePlaying };
+    public enum GameGenre { Card, Dice, RolePlaying, Strategy };
 
     public class Game
     {

@@ -90,6 +90,14 @@
     <Compile Include="Migrations\201904121459014_2nd3rdControllers.Designer.cs">
       <DependentUpon>201904121459014_2nd3rdControllers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904151354325_BackEndComplete.cs" />
+    <Compile Include="Migrations\201904151354325_BackEndComplete.Designer.cs">
+      <DependentUpon>201904151354325_BackEndComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904151833063_CleanedUpGameNight.cs" />
+    <Compile Include="Migrations\201904151833063_CleanedUpGameNight.Designer.cs">
+      <DependentUpon>201904151833063_CleanedUpGameNight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904121459014_2nd3rdControllers.resx">
       <DependentUpon>201904121459014_2nd3rdControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904151354325_BackEndComplete.resx">
+      <DependentUpon>201904151354325_BackEndComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904151833063_CleanedUpGameNight.resx">
+      <DependentUpon>201904151833063_CleanedUpGameNight.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

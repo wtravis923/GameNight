@@ -11,12 +11,9 @@ namespace GameNight.Models
     {
         public int GameTimeId { get; set; }
         public Guid OwnerId { get; set; }
-        public string Game { get; set; }
         [Display(Name="When")]
         public DateTimeOffset DateTime { get; set; }
         public string Location { get; set; }
-        public int NumberOfPlayers { get; set; }
-        public bool Openings { get; set; }
         public bool NoobsAllowed { get; set; }
         public string Description { get; set; }
         public string TutorialVideo { get; set; }
