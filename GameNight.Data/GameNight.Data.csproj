@@ -58,84 +58,11 @@
     <Compile Include="Gamer.cs" />
     <Compile Include="GameTime.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201904081343514_initialdbbuildafterdeletingdb.cs" />
-    <Compile Include="Migrations\201904081343514_initialdbbuildafterdeletingdb.Designer.cs">
-      <DependentUpon>201904081343514_initialdbbuildafterdeletingdb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904091814364_AddedUserName.cs" />
-    <Compile Include="Migrations\201904091814364_AddedUserName.Designer.cs">
-      <DependentUpon>201904091814364_AddedUserName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904101309078_RemovedNameBio.cs" />
-    <Compile Include="Migrations\201904101309078_RemovedNameBio.Designer.cs">
-      <DependentUpon>201904101309078_RemovedNameBio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904101422431_GamerTag.cs" />
-    <Compile Include="Migrations\201904101422431_GamerTag.Designer.cs">
-      <DependentUpon>201904101422431_GamerTag.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904101806599_AdminRole.cs" />
-    <Compile Include="Migrations\201904101806599_AdminRole.Designer.cs">
-      <DependentUpon>201904101806599_AdminRole.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904111410029_UserProfile.cs" />
-    <Compile Include="Migrations\201904111410029_UserProfile.Designer.cs">
-      <DependentUpon>201904111410029_UserProfile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904121326477_2nd3rdTables.cs" />
-    <Compile Include="Migrations\201904121326477_2nd3rdTables.Designer.cs">
-      <DependentUpon>201904121326477_2nd3rdTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904121459014_2nd3rdControllers.cs" />
-    <Compile Include="Migrations\201904121459014_2nd3rdControllers.Designer.cs">
-      <DependentUpon>201904121459014_2nd3rdControllers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904151354325_BackEndComplete.cs" />
-    <Compile Include="Migrations\201904151354325_BackEndComplete.Designer.cs">
-      <DependentUpon>201904151354325_BackEndComplete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904151833063_CleanedUpGameNight.cs" />
-    <Compile Include="Migrations\201904151833063_CleanedUpGameNight.Designer.cs">
-      <DependentUpon>201904151833063_CleanedUpGameNight.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904081343514_initialdbbuildafterdeletingdb.resx">
-      <DependentUpon>201904081343514_initialdbbuildafterdeletingdb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904091814364_AddedUserName.resx">
-      <DependentUpon>201904091814364_AddedUserName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904101309078_RemovedNameBio.resx">
-      <DependentUpon>201904101309078_RemovedNameBio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904101422431_GamerTag.resx">
-      <DependentUpon>201904101422431_GamerTag.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904101806599_AdminRole.resx">
-      <DependentUpon>201904101806599_AdminRole.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904111410029_UserProfile.resx">
-      <DependentUpon>201904111410029_UserProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904121326477_2nd3rdTables.resx">
-      <DependentUpon>201904121326477_2nd3rdTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904121459014_2nd3rdControllers.resx">
-      <DependentUpon>201904121459014_2nd3rdControllers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904151354325_BackEndComplete.resx">
-      <DependentUpon>201904151354325_BackEndComplete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904151833063_CleanedUpGameNight.resx">
-      <DependentUpon>201904151833063_CleanedUpGameNight.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

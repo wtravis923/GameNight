@@ -17,5 +17,7 @@ namespace GameNight.Models
         public bool NoobsAllowed { get; set; }
         public string Description { get; set; }
         public string TutorialVideo { get; set; }
+        [Required]
+        public int GameId { get; set; }
     }
 }

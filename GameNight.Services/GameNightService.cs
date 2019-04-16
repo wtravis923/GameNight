@@ -22,6 +22,7 @@ namespace GameNight.Services
             var entity =
                 new GameTime()
                 {
+                    GameId = model.GameId,
                     OwnerId = _userId,
                     DateTime = model.DateTime,
                     Location = model.Location,
@@ -46,10 +47,13 @@ namespace GameNight.Services
                     .GameTimes
                     //.Where(e => e.OwnerId == _userId)
                     .Select(
-
                      e =>
                         new GameNightListItem
                         {
+                            GameId = e.GameId,
+                            Title = e.Game.Title,
+                            Genre = e.Game.Genre,
+                            PlayerCount = e.Game.PlayerCount,
                             GameTimeId = e.GameTimeId,
                             DateTime = e.DateTime,
                             Location = e.Location,
@@ -57,9 +61,9 @@ namespace GameNight.Services
                             Description = e.Description,
                             TutorialVideo = e.TutorialVideo,
                         }
-                        );
+                        ).ToArray();
 
-                return query.ToArray();
+                return query;
             }
         }
 
@@ -75,6 +79,8 @@ namespace GameNight.Services
                     new GameNightDetail
                     {
                         GameTimeId = entity.GameTimeId,
+                        GameId = entity.Game.GameId,
+                        Title = entity.Game.Title,
                         DateTime = entity.DateTime,
                         Location = entity.Location,
                         NoobsAllowed = entity.NoobsAllowed,
@@ -93,6 +99,7 @@ namespace GameNight.Services
                     .GameTimes
                     .Single(e => e.GameTimeId == model.GameTimeId && e.OwnerId == _userId);
 
+                entity.GameId = model.GameId;
                 entity.DateTime = model.DateTime;
                 entity.Location = model.Location;
                 entity.NoobsAllowed = model.NoobsAllowed;

@@ -15,8 +15,12 @@ namespace GameNight.Models
         public DateTimeOffset DateTime { get; set; }
         [Display(Name = "Where")]
         public string Location { get; set; }
+        [Display(Name = "Noobs Welcome?")]
         public bool NoobsAllowed { get; set; }
         public string Description { get; set; }
+        [Display(Name = "Tutorial")]
         public string TutorialVideo { get; set; }
+        [Required]
+        public int GameId { get; set; }
     }
 }

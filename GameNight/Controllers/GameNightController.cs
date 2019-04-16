@@ -24,6 +24,11 @@ namespace GameNight.Controllers
         // GET
         public ActionResult Create()
         {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var gatheringService = new GameService(userId);
+            var gameList = gatheringService.GetGames();
+
+            ViewBag.GameId = new SelectList(gameList, "GameId", "Title");
             return View();
         }
 

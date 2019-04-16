@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameNight.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,8 +16,15 @@ namespace GameNight.Models
         public DateTimeOffset DateTime { get;  set; }
         [Display(Name="Where")]
         public string Location { get; set; }
+        [Display(Name="Noobs Welcome?")]
         public bool NoobsAllowed { get; set; }
         public string Description { get; set; }
+        [Display(Name ="Tutorial")]
         public string TutorialVideo { get; set; }
+
+        public virtual Game Game { get; set; }
+        public int GameId { get; set; }
+        public string Title { get; set; }
+        //public GameGenre Genre { get; set; }
     }
 }
