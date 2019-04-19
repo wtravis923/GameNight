@@ -17,7 +17,7 @@ namespace GameNight.Models
         [Display(Name="Where")]
         public string Location { get; set; }
         [Display(Name="Noobs Welcome?")]
-        public bool NoobsAllowed { get; set; }
+        public Noobs NoobsAllowed { get; set; }
         public string Description { get; set; }
         [Display(Name ="Tutorial")]
         public string TutorialVideo { get; set; }

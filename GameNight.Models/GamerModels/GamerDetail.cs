@@ -9,6 +9,7 @@ namespace GameNight.Models.GamerModels
     public class GamerDetail
     {
         public int GamerId { get; set; }
+        public string GamerTag { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }

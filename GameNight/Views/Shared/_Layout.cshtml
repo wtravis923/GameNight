@@ -3,42 +3,42 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - GameNight!</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("My Games", "Index", "Game")</li>
-                        <li>@Html.ActionLink("Game Times", "Index", "GameNight")</li>
-                        <li>@Html.ActionLink("Gamers", "Index", "Gamer")</li>
-                    }
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+    <h1 class="display-1 logo">Game Night!</h1>
+    @if (User.Identity.IsAuthenticated)
+     {
+        <a href="~/Game/" class="mainlink"><span>My Games</span></a><br />
+        <a href="~/GameNight/" class="mainlink"><span>Game Times</span></a><br />
+        <a href="~/Gamer/" class="mainlink"><span>Gamers</span></a><br />
+        <a href="javascript:document.getElementById('logoutForm').submit()" class="mainlink"><span>Log Off</span></a>
+     } 
+
+    @if (!User.Identity.IsAuthenticated)
+     {
+        <a href="~/Account/Login" class="mainlink"><span>Login</span></a><br />
+        <a href="~/Account/Register" class="mainlink"><span>Register</span></a>
+     }
+    
     <div class="container body-content">
+
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="logoff">
+                @Html.Partial("_LoginPartial")
+            </div>
+            <p>&copy; @DateTime.Now.Year - GameNight Web</p>
         </footer>
+
+    </div>
+    <div class="container-fluid">
+        <img src="~/assets/boardgamebackground.jpg" class="bg" />
     </div>
 
     @Scripts.Render("~/bundles/jquery")

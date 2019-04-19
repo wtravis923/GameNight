@@ -20,39 +20,44 @@
 </div>
 }
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Genre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlayerCount)
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-striped table-responsive-md btn-table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlayerCount)
+            </th>
+        </tr>
+    </thead>
 
 @foreach (var item in Model) {
-    <tr>
-        @Html.HiddenFor(modelItem => item.GameId)
+    <tbody>
+        <tr>
+            @Html.HiddenFor(modelItem => item.GameId)
 
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlayerCount)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.GameId })
-            @Html.ActionLink("Details", "Details", new { id = item.GameId })
-            @Html.ActionLink("Delete", "Delete", new { id = item.GameId })
-        </td>
-    </tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerCount)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.GameId })*@
+                <button type="button" class="btn btn-indigo btn-sm m-0">
+                @Html.ActionLink("Details", "Details", new { id = item.GameId })
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.GameId })*@
+                </button>
+            </td>
+        </tr>
+    </tbody>
 }
 
 </table>

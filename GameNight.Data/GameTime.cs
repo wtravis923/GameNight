@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameNight.Data
 {
+    public enum Noobs { Yes, No }
     public class GameTime
     {
         [Key]
@@ -18,7 +19,7 @@ namespace GameNight.Data
         [Required]
         public string Location { get; set; }
         [Required]
-        public bool NoobsAllowed { get; set; }
+        public Noobs NoobsAllowed { get; set; }
         [Required]
         public string Description { get; set; }
         [Required]

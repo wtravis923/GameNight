@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameNight.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace GameNight.Models
         [Display(Name = "Where")]
         public string Location { get; set; }
         [Display(Name = "Noobs Welcome?")]
-        public bool NoobsAllowed { get; set; }
+        public Noobs NoobsAllowed { get; set; }
         public string Description { get; set; }
         [Display(Name = "Tutorial")]
         public string TutorialVideo { get; set; }

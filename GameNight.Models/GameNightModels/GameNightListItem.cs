@@ -17,15 +17,17 @@ namespace GameNight.Models
         [Display(Name = "Where")]
         public string Location { get; set; }
         [Display(Name = "Noobs Welcome?")]
-        public bool NoobsAllowed { get; set; }
+        public Noobs NoobsAllowed { get; set; }
         public string Description { get; set; }
         [Display(Name = "Tutorial")]
         public string TutorialVideo { get; set; }
 
         public virtual Game Game { get; set; }
+        [Display(Name = "Game")]
         public int GameId { get; set; }
         public string Title { get; set; }
         public GameGenre Genre { get; set; }
+        [Display(Name = "Number of Players")]
         public int PlayerCount { get; set; }
     }
 }

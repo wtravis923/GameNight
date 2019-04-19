@@ -13,7 +13,7 @@ namespace GameNight.Data
     {
 
 
-        public string GamerTag { get; set; }
+        //public string GamerTag { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

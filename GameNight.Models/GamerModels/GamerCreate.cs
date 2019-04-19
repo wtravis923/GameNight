@@ -8,6 +8,7 @@ namespace GameNight.Models
 {
     public class GamerCreate
     {
+        public string GamerTag { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }

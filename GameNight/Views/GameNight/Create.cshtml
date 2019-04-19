@@ -43,10 +43,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NoobsAllowed, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.NoobsAllowed)
-                    @Html.ValidationMessageFor(model => model.NoobsAllowed, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.NoobsAllowed, new { @class = "form-control" })
+                @Html.ValidationMessageFor(Model => Model.NoobsAllowed, "", new { @class = "text-danger" })
             </div>
         </div>
 

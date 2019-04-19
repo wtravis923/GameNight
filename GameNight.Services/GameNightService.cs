@@ -74,7 +74,7 @@ namespace GameNight.Services
                 var entity =
                     ctx
                     .GameTimes
-                    .Single(e => e.GameTimeId == gameTimeId && e.OwnerId == _userId);
+                    .Single(e => e.GameTimeId == gameTimeId);
                 return
                     new GameNightDetail
                     {

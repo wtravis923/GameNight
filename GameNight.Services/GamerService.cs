@@ -23,6 +23,7 @@ namespace GameNight.Services
             var entity =
                 new Gamer()
                 {
+                    GamerTag = model.GamerTag,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     EmailAddress = model.EmailAddress,
@@ -48,6 +49,7 @@ namespace GameNight.Services
                         new GamerListItem
                         {
                             GamerId = e.GamerId,
+                            GamerTag = e.GamerTag,
                             FirstName = e.FirstName,
                             LastName = e.LastName,
                             EmailAddress = e.EmailAddress,
@@ -71,6 +73,7 @@ namespace GameNight.Services
                     new GamerDetail
                     {
                         GamerId = entity.GamerId,
+                        GamerTag = entity.GamerTag,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
                         EmailAddress = entity.EmailAddress,
@@ -88,6 +91,7 @@ namespace GameNight.Services
                     .Gamers
                     .Single(e => e.GamerId == model.GamerId);
 
+                entity.GamerTag = model.GamerTag;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.EmailAddress = model.EmailAddress;
