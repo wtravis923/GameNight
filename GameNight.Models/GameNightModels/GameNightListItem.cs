@@ -18,12 +18,12 @@ namespace GameNight.Models
         public string Location { get; set; }
         [Display(Name = "Noobs Welcome?")]
         public Noobs NoobsAllowed { get; set; }
+        [Display(Name = "Details")]
         public string Description { get; set; }
         [Display(Name = "Tutorial")]
         public string TutorialVideo { get; set; }
 
         public virtual Game Game { get; set; }
-        [Display(Name = "Game")]
         public int GameId { get; set; }
         public string Title { get; set; }
         public GameGenre Genre { get; set; }

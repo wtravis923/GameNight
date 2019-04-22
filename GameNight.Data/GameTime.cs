@@ -26,7 +26,11 @@ namespace GameNight.Data
         public string TutorialVideo { get; set; }
 
         [Required]
+        [Display(Name = "Game")]
         public int GameId { get; set; }
         public virtual Game Game { get; set; }
+        //public string Title { get; set; }
+        //public GameGenre Genre { get; set; }
+        //public int PlayerCount { get; set; }
     }
 }

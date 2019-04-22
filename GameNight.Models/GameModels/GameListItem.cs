@@ -14,6 +14,7 @@ namespace GameNight.Models
 
         public string Title { get; set; }
         public GameGenre Genre { get; set; }
+        [Display(Name = "Max Players")]
         public int PlayerCount { get; set; }
 
         public override string ToString() => Title; 

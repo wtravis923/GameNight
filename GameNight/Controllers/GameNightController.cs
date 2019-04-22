@@ -71,10 +71,14 @@ namespace GameNight.Controllers
         {
             var service = CreateGameNightService();
             var detail = service.GetGameNightById(id);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var gatheringService = new GameService(userId);
+            var gameList = gatheringService.GetGames();
             var model =
                 new GameNightEdit
                 {
                     GameTimeId = detail.GameTimeId,
+                    GameId = detail.GameId,
                     DateTime = detail.DateTime,
                     Location = detail.Location,
                     NoobsAllowed = detail.NoobsAllowed,
@@ -82,6 +86,7 @@ namespace GameNight.Controllers
                     TutorialVideo = detail.TutorialVideo
                 };
 
+            ViewBag.GameId = new SelectList(gameList, "GameId", "Title");
             return View(model);
         }
 
@@ -129,6 +134,8 @@ namespace GameNight.Controllers
 
             return View();
         }
+
+      
 
     }
 }

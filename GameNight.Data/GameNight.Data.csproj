@@ -70,6 +70,18 @@
     <Compile Include="Migrations\201904171528527_UpdatedGamerProfile.Designer.cs">
       <DependentUpon>201904171528527_UpdatedGamerProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904191543204_AddedPartyGame.cs" />
+    <Compile Include="Migrations\201904191543204_AddedPartyGame.Designer.cs">
+      <DependentUpon>201904191543204_AddedPartyGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904221325351_UpdatedPOCO.cs" />
+    <Compile Include="Migrations\201904221325351_UpdatedPOCO.Designer.cs">
+      <DependentUpon>201904221325351_UpdatedPOCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904221534301_test.cs" />
+    <Compile Include="Migrations\201904221534301_test.Designer.cs">
+      <DependentUpon>201904221534301_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904171528527_UpdatedGamerProfile.resx">
       <DependentUpon>201904171528527_UpdatedGamerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904191543204_AddedPartyGame.resx">
+      <DependentUpon>201904191543204_AddedPartyGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904221325351_UpdatedPOCO.resx">
+      <DependentUpon>201904221325351_UpdatedPOCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904221534301_test.resx">
+      <DependentUpon>201904221534301_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

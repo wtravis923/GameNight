@@ -4,94 +4,97 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Game Night Details</h2>
+<div class="container col-md-8 cover">
+    <h2>Game Night Details</h2>
 
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        @*<dt>
-            @Html.DisplayNameFor(model => model.GameTimeId)
-        </dt>
+    <div class="container col-md-12">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-12 col-lg-auto">
+                <hr />
+                <dl class="dl-horizontal">
+                    @Html.HiddenFor(model => Model.GameTimeId)
+                    @Html.HiddenFor(model => Model.OwnerId)
+                    @Html.HiddenFor(model => model.GameId)
+                    
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.GameTimeId)
-        </dd>*@
+                    <dd>
+                        @Html.DisplayFor(model => model.Title)
+                    </dd>
 
-        @*<dt>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Genre)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.OwnerId)
-        </dd>*@
+                    <dd>
+                        @Html.DisplayFor(model => model.Genre)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Game.Title)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateTime)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Game.Title)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.DateTime)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Game.Genre)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Game.Genre)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Location)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DateTime)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PlayerCount)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DateTime)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.PlayerCount)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NoobsAllowed)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.NoobsAllowed)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Game.PlayerCount)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Game.PlayerCount)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Description)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NoobsAllowed)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TutorialVideo)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NoobsAllowed)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.TutorialVideo)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TutorialVideo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TutorialVideo)
-        </dd>
-
-    </dl>
+                </dl>
+            </div>
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <button type="button" class="btn btn-default">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.GameTimeId })
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        @Html.ActionLink("Delete", "Delete", new { id = Model.GameTimeId })
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        @Html.ActionLink("Back to List", "Index")
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

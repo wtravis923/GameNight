@@ -45,7 +45,6 @@ namespace GameNight.Services
                 var query =
                     ctx
                     .GameTimes
-                    //.Where(e => e.OwnerId == _userId)
                     .Select(
                      e =>
                         new GameNightListItem
@@ -81,6 +80,8 @@ namespace GameNight.Services
                         GameTimeId = entity.GameTimeId,
                         GameId = entity.Game.GameId,
                         Title = entity.Game.Title,
+                        Genre = entity.Game.Genre,
+                        PlayerCount = entity.Game.PlayerCount,
                         DateTime = entity.DateTime,
                         Location = entity.Location,
                         NoobsAllowed = entity.NoobsAllowed,

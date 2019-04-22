@@ -10,33 +10,40 @@
 
 </head>
 <body>
-    <h1 class="display-1 logo">Game Night!</h1>
-    @if (User.Identity.IsAuthenticated)
-     {
-        <a href="~/Game/" class="mainlink"><span>My Games</span></a><br />
-        <a href="~/GameNight/" class="mainlink"><span>Game Times</span></a><br />
-        <a href="~/Gamer/" class="mainlink"><span>Gamers</span></a><br />
-        <a href="javascript:document.getElementById('logoutForm').submit()" class="mainlink"><span>Log Off</span></a>
-     } 
+    <div class="container col-md-4  col-md-offset-0">
+        <div class="row">
+            <div class="col-sm">
 
-    @if (!User.Identity.IsAuthenticated)
-     {
-        <a href="~/Account/Login" class="mainlink"><span>Login</span></a><br />
-        <a href="~/Account/Register" class="mainlink"><span>Register</span></a>
-     }
-    
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a href="~/Game/" class="mainlink"><span>My Games</span></a><br />
+                    <a href="~/GameNight/" class="mainlink"><span>Game Times</span></a><br />
+                    <a href="~/Gamer/" class="mainlink"><span>Gamers</span></a><br />
+                    <a href="javascript:document.getElementById('logoutForm').submit()" class="mainlink"><span>Log Off</span></a>
+                }
+
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a href="~/Account/Login" class="mainlink"><span>Login</span></a><br />
+                    <a href="~/Account/Register" class="mainlink"><span>Register</span></a>
+                }
+
+            </div>
+        </div>
+    </div>
     <div class="container body-content">
 
         @RenderBody()
-        <hr />
+        <br />
         <footer>
             <div class="logoff">
                 @Html.Partial("_LoginPartial")
             </div>
-            <p>&copy; @DateTime.Now.Year - GameNight Web</p>
+            <p>&copy; @DateTime.Now.Year - GameNight designed by Willie Travis</p>
         </footer>
-
     </div>
+
+    @*Background Image*@
     <div class="container-fluid">
         <img src="~/assets/boardgamebackground.jpg" class="bg" />
     </div>

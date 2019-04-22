@@ -43,6 +43,7 @@ namespace GameNight.Services
                 var query =
                     ctx
                     .Games
+                    .Where(e => e.OwnerId == _gameId)
                     .Select(
                         e =>
                         new GameListItem
@@ -64,7 +65,7 @@ namespace GameNight.Services
                 var entity =
                     ctx
                     .Games
-                    .Single(e => e.GameId == gameId);
+                    .Single(e => e.GameId == gameId && e.OwnerId == _gameId);
 
                 return
                     new GameDetail
@@ -101,7 +102,7 @@ namespace GameNight.Services
                 var entity =
                     ctx
                     .Games
-                    .Single(e => e.GameId == gameId);
+                    .Single(e => e.GameId == gameId && e.OwnerId == _gameId);
 
                 ctx.Games.Remove(entity);
 

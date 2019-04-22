@@ -4,101 +4,83 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="container col-md-8 cover">
+    <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>GameNightDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.GameTimeId)
-        </dt>
+    <h3>Are you sure you want to delete this game night?</h3>
+    <div class="container col-md-12">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-12 col-lg-auto">
+                <hr />
+                <dl class="dl-horizontal">
+                    @Html.HiddenFor(model => model.GameTimeId)
+                    @Html.HiddenFor(model => model.OwnerId)
 
-        <dd>
-            @Html.DisplayFor(model => model.GameTimeId)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Game)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Game)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.OwnerId)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateTime)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Game)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.DateTime)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Game)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DateTime)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Location)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DateTime)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NoobsAllowed)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.NoobsAllowed)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfPlayers)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Description)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfPlayers)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TutorialVideo)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Openings)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.TutorialVideo)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Openings)
-        </dd>
+                </dl>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NoobsAllowed)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NoobsAllowed)
-        </dd>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TutorialVideo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TutorialVideo)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                    <div class="form-actions no-color col-md-offset-2 col-md-10">
+                        <p>
+                            <input type="submit" value="Delete" class="btn btn-default" />
+                            <button type="button" class="btn btn-default">
+                                @Html.ActionLink("Back to List", "Index")
+                            </button>
+                        </p>
+                    </div>
+                }
+            </div>
         </div>
-    }
+    </div>
 </div>

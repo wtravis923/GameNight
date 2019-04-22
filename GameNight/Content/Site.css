@@ -4,6 +4,13 @@
     height: 100%;
 }
 
+.cover{
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(255,255,255,0.6);
+    border-radius: 10px;
+}
+
 img.bg {
     z-index: -1;
     min-height: 100%;
@@ -43,9 +50,10 @@ textarea {
 }
 
 .mainlink {
-    border-radius: 4px;
+    border-radius: 10px;
     border: none;
     color: lightgrey;
+    background-color: rgba(0,0,0,.2);
     text-align: left;
     font-size: 64px;
     font-family: fantasy;
@@ -84,12 +92,11 @@ textarea {
             left: 10px;
         }
 
-.logo {
-    color: white;
-}
-.logoff{
+.logoff {
     display: none;
 }
+
+
 
 
 
