@@ -82,6 +82,18 @@
     <Compile Include="Migrations\201904221534301_test.Designer.cs">
       <DependentUpon>201904221534301_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904221803506_UpdatedGamerPOCO.cs" />
+    <Compile Include="Migrations\201904221803506_UpdatedGamerPOCO.Designer.cs">
+      <DependentUpon>201904221803506_UpdatedGamerPOCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904230208303_AddedHostToGameNight.cs" />
+    <Compile Include="Migrations\201904230208303_AddedHostToGameNight.Designer.cs">
+      <DependentUpon>201904230208303_AddedHostToGameNight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904230234329_DatabaseFix.cs" />
+    <Compile Include="Migrations\201904230234329_DatabaseFix.Designer.cs">
+      <DependentUpon>201904230234329_DatabaseFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +119,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904221534301_test.resx">
       <DependentUpon>201904221534301_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904221803506_UpdatedGamerPOCO.resx">
+      <DependentUpon>201904221803506_UpdatedGamerPOCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230208303_AddedHostToGameNight.resx">
+      <DependentUpon>201904230208303_AddedHostToGameNight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230234329_DatabaseFix.resx">
+      <DependentUpon>201904230234329_DatabaseFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

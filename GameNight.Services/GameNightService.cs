@@ -29,6 +29,7 @@ namespace GameNight.Services
                     NoobsAllowed = model.NoobsAllowed,
                     Description = model.Description,
                     TutorialVideo = model.TutorialVideo,
+                    GamerId = model.GamerId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -59,6 +60,8 @@ namespace GameNight.Services
                             NoobsAllowed = e.NoobsAllowed,
                             Description = e.Description,
                             TutorialVideo = e.TutorialVideo,
+                            GamerId = e.GamerId,
+                            GamerTag = e.Gamer.GamerTag
                         }
                         ).ToArray();
 
@@ -87,6 +90,8 @@ namespace GameNight.Services
                         NoobsAllowed = entity.NoobsAllowed,
                         Description = entity.Description,
                         TutorialVideo = entity.TutorialVideo,
+                        GamerId = entity.Gamer.GamerId,
+                        GamerTag = entity.Gamer.GamerTag
                     };
             }
         }
@@ -106,6 +111,7 @@ namespace GameNight.Services
                 entity.NoobsAllowed = model.NoobsAllowed;
                 entity.Description = model.Description;
                 entity.TutorialVideo = model.TutorialVideo;
+                entity.GamerId = model.GamerId;
 
                 return ctx.SaveChanges() == 1;
             }

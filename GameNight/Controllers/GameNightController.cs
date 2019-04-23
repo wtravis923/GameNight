@@ -27,8 +27,13 @@ namespace GameNight.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var gatheringService = new GameService(userId);
             var gameList = gatheringService.GetGames();
-
             ViewBag.GameId = new SelectList(gameList, "GameId", "Title");
+
+            var gamerId = Guid.Parse(User.Identity.GetUserId());
+            var gettingService = new GamerService(gamerId);
+            var gamerList = gettingService.GetGamers();
+            ViewBag.GamerId = new SelectList(gameList, "GamerId", "GamerTag");
+
             return View();
         }
 
@@ -74,6 +79,9 @@ namespace GameNight.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var gatheringService = new GameService(userId);
             var gameList = gatheringService.GetGames();
+            var gamerId = Guid.Parse(User.Identity.GetUserId());
+            var gettingService = new GamerService(gamerId);
+            var gamerList = gettingService.GetGamers();
             var model =
                 new GameNightEdit
                 {
@@ -83,10 +91,13 @@ namespace GameNight.Controllers
                     Location = detail.Location,
                     NoobsAllowed = detail.NoobsAllowed,
                     Description = detail.Description,
-                    TutorialVideo = detail.TutorialVideo
+                    TutorialVideo = detail.TutorialVideo,
+                    GamerId = detail.GamerId
                 };
 
             ViewBag.GameId = new SelectList(gameList, "GameId", "Title");
+            ViewBag.GamerId = new SelectList(gamerList, "GamerId", "GamerTag");
+
             return View(model);
         }
 

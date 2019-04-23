@@ -41,7 +41,11 @@
                             @Html.DisplayNameFor(model => model.Location)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.NoobsAllowed)                        
+                            @Html.DisplayNameFor(model => model.NoobsAllowed)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GamerTag)
+                        </th>
                     </tr>
                 </thead>
 
@@ -55,6 +59,7 @@
                             @Html.HiddenFor(modelItem => item.OwnerId)
                             @Html.HiddenFor(modelItem => item.Description)
                             @Html.HiddenFor(modelItem => item.TutorialVideo)
+                            @Html.HiddenFor(modelItem => item.GamerId)
 
                             <td>
                                 @Html.DisplayFor(modelItem => item.Title)
@@ -70,6 +75,9 @@
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.NoobsAllowed)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GamerTag)
                             </td>
                             <td>
                                 <button type="button" class="btn btn-default">

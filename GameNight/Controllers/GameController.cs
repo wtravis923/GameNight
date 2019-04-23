@@ -19,6 +19,7 @@ namespace GameNight.Controllers
             var gameId = Guid.Parse(User.Identity.GetUserId());
             var service = new GameService(gameId);
             var model = service.GetGames();
+
             return View(model);
         }
 

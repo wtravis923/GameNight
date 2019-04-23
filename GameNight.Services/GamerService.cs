@@ -23,11 +23,14 @@ namespace GameNight.Services
             var entity =
                 new Gamer()
                 {
+//                    GamerId = model.GamerId,
+                    PlayerId = _gamerId,
                     GamerTag = model.GamerTag,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     EmailAddress = model.EmailAddress,
-                    Location = model.Location
+                    Location = model.Location,
+                    Bio = model.Bio
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -53,7 +56,8 @@ namespace GameNight.Services
                             FirstName = e.FirstName,
                             LastName = e.LastName,
                             EmailAddress = e.EmailAddress,
-                            Location = e.Location
+                            Location = e.Location,
+                            Bio = e.Bio,
                         }
                         );
                 return query.ToArray();
@@ -78,6 +82,7 @@ namespace GameNight.Services
                         LastName = entity.LastName,
                         EmailAddress = entity.EmailAddress,
                         Location = entity.Location,
+                        Bio = entity.Bio,
                     };
             }
         }
@@ -89,13 +94,14 @@ namespace GameNight.Services
                 var entity =
                     ctx
                     .Gamers
-                    .Single(e => e.GamerId == model.GamerId);
+                    .Single(e => e.GamerId == model.GamerId && e.PlayerId == _gamerId);
 
                 entity.GamerTag = model.GamerTag;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.EmailAddress = model.EmailAddress;
                 entity.Location = model.Location;
+                entity.Bio = model.Bio;
 
                 return ctx.SaveChanges() == 1;
             }

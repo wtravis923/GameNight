@@ -4,55 +4,74 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Gamer Details</h2>
+<div class="container col-md-8 cover">
+    <h2>Gamer Details</h2>
 
-<div>
-    <h4>GamerDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.GamerTag)
-        </dt>
+    <div class="container col-md-12">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-lg-auto">
+                <hr />
+                <dl class="dl-horizontal">
+                    @Html.HiddenFor(model => model.GamerId)
+                    <dt>
+                        @Html.DisplayNameFor(model => model.GamerTag)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.GamerTag)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.GamerTag)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailAddress)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EmailAddress)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.EmailAddress)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.EmailAddress)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Location)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Bio)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Bio)
+                    </dd>
 
-    </dl>
+                </dl>
+            </div>
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <button type="button" class="btn btn-default">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.GamerId })
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        @Html.ActionLink("Back to List", "Index")
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.GamerId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

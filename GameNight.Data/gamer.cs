@@ -11,10 +11,12 @@ namespace GameNight.Data
     {
         [Key]
         public int GamerId { get; set; }
+        public Guid PlayerId { get; set; }
         public string GamerTag { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string Location { get; set; }
+        public string Bio { get; set; }
     }
 }

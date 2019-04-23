@@ -21,5 +21,7 @@ namespace GameNight.Models
         [Required]
         [Display(Name = "Game")]
         public int GameId { get; set; }
+        [Display(Name = "Host")]
+        public int GamerId { get; set; }
     }
 }

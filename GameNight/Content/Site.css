@@ -49,6 +49,7 @@ textarea {
     max-width: 280px;
 }
 
+
 .mainlink {
     border-radius: 10px;
     border: none;
@@ -96,7 +97,9 @@ textarea {
     display: none;
 }
 
-
+#wrap {
+    min-height: 100%;
+}
 
 
 

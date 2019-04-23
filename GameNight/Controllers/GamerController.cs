@@ -62,10 +62,12 @@ namespace GameNight.Controllers
                 new GamerEdit
                 {
                     GamerId = detail.GamerId,
+                    GamerTag = detail.GamerTag,
                     FirstName = detail.FirstName,
                     LastName = detail.LastName,
                     EmailAddress = detail.EmailAddress,
                     Location = detail.Location,
+                    Bio = detail.Bio
                 };
 
             return View(model); 

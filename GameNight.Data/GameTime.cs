@@ -29,8 +29,10 @@ namespace GameNight.Data
         [Display(Name = "Game")]
         public int GameId { get; set; }
         public virtual Game Game { get; set; }
-        //public string Title { get; set; }
-        //public GameGenre Genre { get; set; }
-        //public int PlayerCount { get; set; }
+
+        [Display(Name = "Host")]
+        public int GamerId { get; set; }
+        public virtual Gamer Gamer { get; set; }
+
     }
 }
