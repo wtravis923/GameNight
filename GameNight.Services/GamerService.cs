@@ -23,7 +23,6 @@ namespace GameNight.Services
             var entity =
                 new Gamer()
                 {
-//                    GamerId = model.GamerId,
                     PlayerId = _gamerId,
                     GamerTag = model.GamerTag,
                     FirstName = model.FirstName,
@@ -47,6 +46,7 @@ namespace GameNight.Services
                 var query =
                     ctx
                     .Gamers
+                    .Where(e => e.PlayerId == _gamerId)
                     .Select(
                         e =>
                         new GamerListItem

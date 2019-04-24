@@ -30,8 +30,6 @@ namespace GameNight.Models
         [Display(Name = "Number of Players")]
         public int PlayerCount { get; set; }
 
-        public virtual Gamer Gamer { get; set; }
-        public int GamerId { get; set; }
         [Display(Name = "Host")]
         public string GamerTag { get; set; }
     }

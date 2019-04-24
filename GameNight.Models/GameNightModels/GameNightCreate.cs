@@ -22,6 +22,6 @@ namespace GameNight.Models
         [Display(Name = "Game")]
         public int GameId { get; set; }
         [Display(Name = "Host")]
-        public int GamerId { get; set; }
+        public string GamerTag { get; set; }
     }
 }

@@ -31,8 +31,7 @@ namespace GameNight.Data
         public virtual Game Game { get; set; }
 
         [Display(Name = "Host")]
-        public int GamerId { get; set; }
-        public virtual Gamer Gamer { get; set; }
+        public string GamerTag { get; set; }
 
     }
 }

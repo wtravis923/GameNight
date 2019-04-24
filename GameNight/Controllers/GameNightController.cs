@@ -32,7 +32,7 @@ namespace GameNight.Controllers
             var gamerId = Guid.Parse(User.Identity.GetUserId());
             var gettingService = new GamerService(gamerId);
             var gamerList = gettingService.GetGamers();
-            ViewBag.GamerId = new SelectList(gameList, "GamerId", "GamerTag");
+            ViewBag.GamerTag = new SelectList(gamerList, "GamerTag", "GamerTag");
 
             return View();
         }
@@ -92,11 +92,11 @@ namespace GameNight.Controllers
                     NoobsAllowed = detail.NoobsAllowed,
                     Description = detail.Description,
                     TutorialVideo = detail.TutorialVideo,
-                    GamerId = detail.GamerId
+                    GamerTag = detail.GamerTag
                 };
 
             ViewBag.GameId = new SelectList(gameList, "GameId", "Title");
-            ViewBag.GamerId = new SelectList(gamerList, "GamerId", "GamerTag");
+            ViewBag.GamerTag = new SelectList(gamerList, "GamerTag", "GamerTag");
 
             return View(model);
         }
@@ -145,8 +145,5 @@ namespace GameNight.Controllers
 
             return View();
         }
-
-      
-
     }
 }

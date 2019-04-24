@@ -29,9 +29,8 @@ namespace GameNight.Models
         public GameGenre Genre { get; set; }
         public int PlayerCount { get; set; }
 
-        public virtual Gamer Gamer { get; set; }
+
         [Display(Name = "Host")]
-        public int GamerId { get; set; }
         public string GamerTag { get; set; }
     }
 }

@@ -94,6 +94,30 @@
     <Compile Include="Migrations\201904230234329_DatabaseFix.Designer.cs">
       <DependentUpon>201904230234329_DatabaseFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904231250445_v1.0.cs" />
+    <Compile Include="Migrations\201904231250445_v1.0.Designer.cs">
+      <DependentUpon>201904231250445_v1.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904231300278_v1.1.cs" />
+    <Compile Include="Migrations\201904231300278_v1.1.Designer.cs">
+      <DependentUpon>201904231300278_v1.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904231420484_v1.2.cs" />
+    <Compile Include="Migrations\201904231420484_v1.2.Designer.cs">
+      <DependentUpon>201904231420484_v1.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904231808139_UpdateDeployment.cs" />
+    <Compile Include="Migrations\201904231808139_UpdateDeployment.Designer.cs">
+      <DependentUpon>201904231808139_UpdateDeployment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904241739104_UpdatedForeignKey.cs" />
+    <Compile Include="Migrations\201904241739104_UpdatedForeignKey.Designer.cs">
+      <DependentUpon>201904241739104_UpdatedForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904241744067_AddedGamerTagToGameList.cs" />
+    <Compile Include="Migrations\201904241744067_AddedGamerTagToGameList.Designer.cs">
+      <DependentUpon>201904241744067_AddedGamerTagToGameList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -128,6 +152,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904230234329_DatabaseFix.resx">
       <DependentUpon>201904230234329_DatabaseFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904231250445_v1.0.resx">
+      <DependentUpon>201904231250445_v1.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904231300278_v1.1.resx">
+      <DependentUpon>201904231300278_v1.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904231420484_v1.2.resx">
+      <DependentUpon>201904231420484_v1.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904231808139_UpdateDeployment.resx">
+      <DependentUpon>201904231808139_UpdateDeployment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904241739104_UpdatedForeignKey.resx">
+      <DependentUpon>201904241739104_UpdatedForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904241744067_AddedGamerTagToGameList.resx">
+      <DependentUpon>201904241744067_AddedGamerTagToGameList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

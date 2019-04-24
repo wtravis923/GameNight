@@ -17,6 +17,9 @@ namespace GameNight.Models
         [Display(Name = "Max Players")]
         public int PlayerCount { get; set; }
 
+        [Display(Name = "Host")]
+        public string GamerTag { get; set; }
+
         public override string ToString() => Title; 
     }
 }
